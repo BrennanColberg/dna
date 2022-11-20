@@ -2,10 +2,11 @@
 	"name": "dna",
 	"scripts": {
 		"build": "tsc",
-		"dev": "tsc --watch & ws -d dist",
+		"dev": "tsc --watch & sass --watch --no-source-map src:dist",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
+		"sass": "1.56.1",
 		"typescript": "4.8.4"
 	}
 }

@@ -11,11 +11,24 @@ input.onchange = input.onkeyup = () => {
 			chars.push(text.charCodeAt(i));
 		}
 	}
-	output.textContent = chars
-		.map((char) => ("0000" + char.toString(4)).slice(-4))
-		.join(" ")
-		.replaceAll("0", "A")
-		.replaceAll("1", "C")
-		.replaceAll("2", "G")
-		.replaceAll("3", "T");
+	output.replaceChildren(
+		...chars
+			.map((char) => ("0000" + char.toString(4)).slice(-4))
+			.join(" ")
+			.replaceAll("0", "A")
+			.replaceAll("1", "C")
+			.replaceAll("2", "G")
+			.replaceAll("3", "T")
+			.split("")
+			.map((char) => {
+				// wrap nucleotide letters in appropriate spans
+				if (/[ACTG]/i.test(char)) {
+					const span = document.createElement("span");
+					span.classList.add("nucleotide");
+					span.classList.add(char);
+					span.textContent = char;
+					return span;
+				} else return char;
+			})
+	);
 };

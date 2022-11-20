@@ -1,0 +1,16 @@
+span.nucleotide {
+	font-weight: bold;
+
+	&.A {
+		background-color: #faa;
+	}
+	&.C {
+		background-color: #aaf;
+	}
+	&.G {
+		background-color: #afa;
+	}
+	&.T {
+		background-color: #ffa;
+	}
+}

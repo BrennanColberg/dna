@@ -1,3 +1,6 @@
 node_modules
-dist/**/*.js
 .DS_Store
+
+# build results
+dist/**/*.js
+dist/**/*.css
