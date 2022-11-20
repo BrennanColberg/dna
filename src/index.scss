@@ -1,5 +1,16 @@
+#output {
+	font-size: 20pt;
+}
+
 span.nucleotide {
-	font-weight: bold;
+	font-weight: medium;
+	font-family: monospace;
+
+	display: inline-block;
+	text-align: center;
+	height: 1em;
+	width: 1em;
+	padding-bottom: 0.2em;
 
 	&.A {
 		background-color: #faa;
