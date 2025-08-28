@@ -1,11 +1,11 @@
-const input = document.getElementById("input") as HTMLInputElement;
-const output = document.getElementById("output") as HTMLParagraphElement;
+const input = document.getElementById("input");
+const output = document.getElementById("output");
 console.log({ input, output });
 
 input.onchange = input.onkeyup = () => {
 	console.log("update!");
 	const text = input.value;
-	const chars: number[] = [];
+	const chars = [];
 	for (let i = 0; i < text.length; i++) {
 		if (text.charCodeAt(i) < 256) {
 			chars.push(text.charCodeAt(i));

@@ -11,17 +11,20 @@ span.nucleotide {
 	height: 1em;
 	width: 1em;
 	padding-bottom: 0.2em;
+}
 
-	&.A {
-		background-color: #faa;
-	}
-	&.C {
-		background-color: #aaf;
-	}
-	&.G {
-		background-color: #afa;
-	}
-	&.T {
-		background-color: #ffa;
-	}
+span.nucleotide.A {
+	background-color: #faa;
+}
+
+span.nucleotide.C {
+	background-color: #aaf;
+}
+
+span.nucleotide.G {
+	background-color: #afa;
+}
+
+span.nucleotide.T {
+	background-color: #ffa;
 }
